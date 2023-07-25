@@ -53,7 +53,7 @@ router.put("/forgot-password", async (req, res) => {
       Math.random().toString(36).substring(2, 15) +
       Math.random().toString(36).substring(2, 15);
 
-    const link = `http://localhost:3000/users/reset-password/${randomString}`;
+    const link = `https://teal-nougat-4511c5.netlify.app/users/reset-password/${randomString}`;
 
     user.resetToken = randomString;
     const updateUser = await User.findByIdAndUpdate(user.id, user);
